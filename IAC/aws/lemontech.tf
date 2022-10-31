@@ -4,8 +4,8 @@ locals {
 }
 
 module "lemontech-simple-app" {
-    #source          = "git@github.com:esleirter/IAC-modules.git//terraform/aws/vpc?ref=master"
-    source          = "../../../IAAC-modules/terraform/aws/lemontech-simple-app/"
+    source          = "git@github.com:esleirter/IAAC-modules.git//terraform/aws/lemontech-simple-app?ref=master"
+    #source          = "../../../IAAC-modules/terraform/aws/lemontech-simple-app/"
     env             = "${local.env}"
     project         = "${local.project}"
     k8s_version     = "1.23"

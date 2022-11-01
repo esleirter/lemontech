@@ -33,6 +33,7 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.2.5
+          tf_actions_working_dir: './IAC/aws/'
 
       - name: Terraform fmt
         id: fmt

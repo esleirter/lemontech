@@ -39,6 +39,8 @@ jobs:
         id: fmt
         run: terraform fmt -check
         continue-on-error: true
+        with:
+          tf_actions_working_dir: './IAC/aws/'
 
       - name: Terraform Init
         id: init
@@ -46,6 +48,8 @@ jobs:
         #   AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
         #   AWS_BUCKET_KEY_NAME: ${{ secrets.AWS_BUCKET_KEY_NAME }}
         run: terraform init
+        with:
+          tf_actions_working_dir: './IAC/aws/'
 
       - name: Terraform Validate
         id: validate
